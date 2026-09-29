@@ -28,3 +28,9 @@ def connections_page():
 @blueprint.get("/transactions")
 def transactions_page():
     return render_template("transactions.html", import_help=institution_registry().import_help())
+
+
+@blueprint.get("/poc/salary-projection")
+def salary_projection_poc():
+    """Interactive browser-only POC for the proposed salary projection workflow."""
+    return render_template("salary_projection_poc.html")
